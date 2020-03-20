@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <otrs_config version="1.0" init="Application">
+  <ConfigItem Name="DashboardBackend-TicketStatus-Review" Required="0" Valid="1">
+  <Description Lang="en">Parameters for the dashboard backend. ...</Description>
+  <Description Lang="de">Parameter für das Dashboard Backend. ... </Description>
+  <Group>Ticket</Group>
+  <SubGroup>Frontend::Agent::Dashboard</SubGroup>
+  <Setting>
+   <Hash>
+    <Item Key="Module">Kernel::Output::HTML::DashboardTicketGeneric</Item>
+    <Item Key="Title">Review</Item>
+    <Item Key="Description">Tickets which need to be reviewed!</Item>
+    <Item Key="Attributes">States=review;</Item>
+    <Item Key="Filter">All</Item>
+    <Item Key="Time">Age</Item>
+    <Item Key="Limit">10</Item>
+    <Item Key="Permission">rw</Item>
+    <Item Key="Block">ContentLarge</Item>
+    <Item Key="Group"></Item>
+    <Item Key="Default">1</Item>
+    <Item Key="CacheTTLLocal">0.5</Item>
+   </Hash>
+  </Setting>
+ </ConfigItem>
+</otrs_config>
